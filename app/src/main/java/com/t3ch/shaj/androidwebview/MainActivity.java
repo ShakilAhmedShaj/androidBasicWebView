@@ -20,5 +20,19 @@ public class MainActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("http://shakilahmedshaj.com/");
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack();
+        }
+        else
+        {
+            super.onBackPressed();
+        }
+
+
     }
 }
